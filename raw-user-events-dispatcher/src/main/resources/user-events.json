@@ -1,0 +1,49 @@
+[
+  {
+    "eventType": "SHOPPER_VIEWED_PRODUCT",
+    "user": {
+      "ip": "70.46.123.145",
+      "id": "123"
+    },
+    "product": {
+      "sku": "appl-001",
+      "name": "Ipad"
+    },
+    "timestamp": "2018-10-15T12:01:35Z"
+  },
+  {
+    "eventType": "SHOPPER_VIEWED_PRODUCT",
+    "user": {
+      "ip": "89.92.213.32",
+      "id": "456"
+    },
+    "product": {
+      "sku": "thl-50",
+      "name": "backpack"
+    }
+  },
+  {
+    "eventType": "SHOPPER_ADDED_PRODUCT",
+    "user": {
+      "ip": "70.46.123.145",
+      "id": "123"
+    },
+    "product": {
+      "sku": "appl-001",
+      "name": "Ipad",
+      "quantity": "1"
+    }
+  },
+  {
+    "eventType": "SHOPPER_ADDED_PRODUCT",
+    "user": {
+      "ip": "89.92.213.32",
+      "id": "456"
+    },
+    "product": {
+      "sku": "thl-50",
+      "name": "backpack",
+      "quantity": "1"
+    }
+  }
+]

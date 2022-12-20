@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    stream:
+      source: streamBridgeRawUserEvent
+      bindings:
+        streamBridgeRawUserEvent-out-0:
+          destination: ecommerce-raw-events
+      rabbit:
+        bindings:
+          streamBridgeRawUserEvent-out-0:
+            producer:
+              routingKeyExpression: '''raw.users.events'''
