@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    function:
+      definition: userRawEvents
+    stream:
+      bindings:
+        userRawEvents-in-0:
+          destination: user-raw-events
+          group: user-raw-events-consumer
+      rabbit:
+        bindings:
+          userRawEvents-in-0:
+            consumer:
+              bindingRoutingKey: "users.raw.events"

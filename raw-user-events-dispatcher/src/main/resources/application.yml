@@ -1,12 +1,19 @@
 spring:
   cloud:
+    function:
+      definition: rawEventSupplier
     stream:
       source: streamBridgeRawUserEvent
       bindings:
+        rawEventSupplier-out-0:
+          destination: user-raw-events
         streamBridgeRawUserEvent-out-0:
-          destination: ecommerce-raw-events
+          destination: user-raw-events
       rabbit:
         bindings:
+          rawEventSupplier-out-0:
+            producer:
+              routingKeyExpression: '''users.raw.events'''
           streamBridgeRawUserEvent-out-0:
             producer:
-              routingKeyExpression: '''raw.users.events'''
+              routingKeyExpression: '''users.raw.events'''
